@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">2 praktinis</string>
+    <string name="count_button_text">Count</string>
+    <string name="input_hint">Enter text here</string>
+    <string name="words_option">Words</string>
+    <string name="characters_option">Characters</string>
+    <string name="empty_input_error">Input field cannot be empty!</string>
+    <string name="result_prefix">Count: </string>
+
+    <string-array name="calculation_types">
+        <item>@string/words_option</item>
+        <item>@string/characters_option</item>
+    </string-array>
+</resources>

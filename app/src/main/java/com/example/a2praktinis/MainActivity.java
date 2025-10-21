@@ -8,7 +8,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-// Visi kintamieji, metodai ir klasės pavadinimai anglų kalba (Reikalavimas 1, 3)
+// Visi kintamieji, metodai ir klasės pavadinimai anglų kalba
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,13 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Susiejame UI elementus pagal ID (Reikalavimas 2)
+        // Susiejame UI elementus pagal ID
         textToCountEditText = findViewById(R.id.textToCountEditText);
         calculationTypeSpinner = findViewById(R.id.calculationTypeSpinner);
         resultTextView = findViewById(R.id.resultTextView);
 
-        // Spinner nereikia papildomai konfigūruoti, nes parinktys
-        // nurodytos tiesiogiai activity_main.xml per android:entries
     }
 
     /**
@@ -38,15 +36,15 @@ public class MainActivity extends AppCompatActivity {
         // Paimame tekstą iš EditText ir pašaliname pradinius/galinius tarpus patikrinimui
         String input = textToCountEditText.getText().toString();
 
-        // 6. Programėlė turi tikrinti įvedamą tekstą (ar laukas nėra tuščias)
+        // Programėlė turi tikrinti įvedamą tekstą (ar laukas nėra tuščias)
         if (input.trim().isEmpty()) {
-            // Parodome pranešimą, naudojant Toast (Reikalavimas 6)
+            // Parodome pranešimą, naudojant Toast
             Toast.makeText(this, R.string.empty_input_error, Toast.LENGTH_SHORT).show();
             // Nutraukiame vykdymą, jei tekstas tuščias
             return;
         }
 
-        // Gauname pasirinktą parinktį iš Spinner (Reikalavimas 3)
+        // Gauname pasirinktą parinktį iš Spinner
         String selectedOption = calculationTypeSpinner.getSelectedItem().toString();
         int result = 0;
 
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             result = Calculator.countCharacters(input);
         }
 
-        // 5. Rezultatas parodomas naudojant TextView tipo elementą
+        // Rezultatas parodomas naudojant TextView tipo elementą
         String resultText = getString(R.string.result_prefix) + result;
         resultTextView.setText(resultText);
     }

@@ -3,9 +3,6 @@ package com.example.a2praktinis;
 public class Calculator {
     /**
      * Suskaičiuoja žodžių skaičių tekste.
-     * Žodžiai atskiriami vienu ar daugiau tarpų (Reikalavimas 1).
-     * @param text Tekstas, kuriame skaičiuojami žodžiai.
-     * @return Žodžių skaičius.
      */
     public static int countWords(String text) {
         // Patikriname, ar tekstas tuščias ar null.
@@ -20,7 +17,7 @@ public class Calculator {
     }
 
     /**
-     * Suskaičiuoja rašybos ženklų (simbolių) skaičių tekste (Reikalavimas 1).
+     * Suskaičiuoja rašybos ženklų (simbolių) skaičių tekste.
      * @param text Tekstas, kuriame skaičiuojami ženklai.
      * @return Ženklų skaičius.
      */
